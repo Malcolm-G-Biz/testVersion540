@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="http://www.skyve.org/xml/module" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="Test 540 collaboration" prototype="true" name="test540Collaboration" xsi:schemaLocation="http://www.skyve.org/xml/module ../../schemas/module.xsd">
+    <homeRef>list</homeRef>
+    <homeDocument>Fruit</homeDocument>
+    <documents>
+        <document ref="Fruit"/>
+    </documents>
+    <roles>
+        <role name="Viewer">
+            <description><![CDATA[Enough privileges to view Test 540 collaboration documents.]]></description>
+            <privileges>
+                <document name="Fruit" permission="_R__C"/>
+            </privileges>
+        </role>
+        <role name="Maintainer">
+            <description><![CDATA[Enough privileges to create and edit Test 540 collaboration documents.]]></description>
+            <privileges>
+                <document name="Fruit" permission="CRUDC"/>
+            </privileges>
+        </role>
+    </roles>
+    <menu>
+        <list document="Fruit" name="Fruits">
+            <role name="Maintainer"/>
+            <role name="Viewer"/>
+        </list>
+    </menu>
+</module>
